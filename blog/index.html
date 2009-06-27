@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+    <title>c.wanstrath</title>
+  </head>
+  <body>
+    <div id="header">
+      <!--
+      <div id="meta">
+        <a href="projects.html">projects</a> 
+        ∵ <a href="about.html">about</a>
+        ∵ <a href="mailto:chris@ozmm.org">contact</a>        
+      </div>
+      -->
+      chris wanstrath.
+    </div>
+    <div id="main">
+      <div class="post">
+        <h1>The jSkinny on jQuery</h1>
+    <p>j-j-j-jQuery.  It&#8217;s on everyone&#8217;s lips, right?  You love it or you hate it, or you&#8217;ve never tried it but you love it, or you&#8217;ve never tried it but you super-hate it.  Yeah, we know.</p>
+
+
+	<p>Well, PJ and I launched <a href="http://famspam.com/">FamSpam</a> a bit ago and made the bold move of powering all the jabbascript with <a href="http://jquery.com">jQuery</a>.  We even wrote our own Facbeook-style lightbox library in jQuery (<a href="http://famspam.com/facebox/">Facebox</a>).  So while this is a Ruby blog, indulge me for a moment as we dance with Ruby&#8217;s ugly-cool half-sister: Javascript.</p>
+
+
+	<h3> whatQuery?</h3>
+
+
+	<p>There are a bajillion posts about jQuery, all of which introduce you gently, so I will be brief: jQuery is all about a single namespace and kickass querying.  (Get it?)</p>
+
+
+	<p>Our buddy Hpricot, you may remember, was heavily influenced by jQuery&#8217;s selector syntax.  Which was, in turn, heavily influenced by <span class="caps">CSS</span> selectors.  As such, some of this may look familiar:</p>
+
+
+<pre>
+$('#id').hide()
+$('.class').css('height', 20)
+$('#posts li &gt; a').addClass('dark')
+</pre>
+
+	<p>And so forth.  One of the fun things is that any of those <span class="code">$()</span> queries may return 0, 1, or more elements&#8212;yet the code stays the same.  That&#8217;s right: our <span class="code">css()</span> call would affect the height of all matched elements.  Same with the <span class="code">addClass</span>.  But, if nothing is found, it&#8217;ll all silently fail.  jAwesome!</p>
+
+
+	<h3> niceQuery()</h3>
+
+
+	<p>While some of the recent &#8220;jQuery vs &lt;insert_framework_here&gt;&#8221; blog posts might not be so nice, jQuery itself certainly is: it (mostly) easily works alongside other libraries.  That means you can start dipping your toe into the jSauce while your Prototype or MooTools code doesn&#8217;t suspect a thing.</p>
+
+
+	<p>It&#8217;s easy:</p>
+
+
+<pre>
+jQuery.noConflict()
+</pre>
+
+My above examples would now be written like this:
+<pre>
+jQuery('#id').hide()
+jQuery('.class').css('height', 20)
+jQuery('#posts li &gt; a').addClass('dark')
+</pre>
+
+	<p>The <span class="code">noConflict()</span> call causes jQuery to defer ownership of <span class="code">$()</span> to Moo or Proto, leaving your current js intact.  How thoughtful.  Check more at the comprehensive <a href="http://docs.jquery.com/Using_jQuery_with_Other_Libraries">doc site</a>.</p>
+
+
+	<h3>chainQuery()</h3>
+
+
+	<p>jQuery is all about chaining, in a big way.  Here&#8217;s an example from FamSpam:</p>
+
+
+<pre>
+var person_email = $(this).parent().find('#person_email').val()
+</pre>
+
+	<p>Pretty self explanatory.  The <span class="code">find</span> is scoped to the receiver, in this case the parent of the current element.</p>
+
+
+	<p>Another cool chain:</p>
+
+
+<pre>
+$('#invite_error').show().text('Please enter an email and a name.')  
+</pre>
+
+	<p>Hrm, we should probably put <span class="code">text()</span> before <span class="code">show()</span>, yeah?  I love these kind of questions!</p>
+
+
+	<p>Finally, a slightly more advanced chain:</p>
+
+
+<pre>
+$('#facebox .body').children().hide().end().
+append('&lt;div class="loading"&gt;&lt;img src="'+$s.loading_image+'"/&gt;&lt;/div&gt;')
+</pre>
+
+	<p>Get it?  The <span class="code">end()</span> reverts the most recent &#8216;destructive&#8217; (read: find) operation.  So we start with the <span class="code">.body</span>, then find its children, then hide its children, then go back to <span class="code">.body</span> and append some html.  Slick, I think.  Real slick.</p>
+
+
+	<p>Like I said, the <a href="http://docs.jquery.com/Traversing">doc site</a> is super great.</p>
+
+
+	<h3>ujsQuery()</h3>
+
+
+	<p>Okay, here&#8217;s the segue: jQuery has unobtrusiveness built in.  And it feels smooth.  Real smooth.</p>
+
+
+	<p>Here, a snippet straight from FamSpam&#8217;s javascript:</p>
+
+
+<pre>
+$('.reset_invite_form').click(function() {
+  $('#new_person').resetForm()
+  $('#invite_another').hide()
+  $('#invite_another &gt; span').remove()
+  $('#new_person').show()
+  return false
+})
+</pre>
+
+	<p>Pretty simple, right?  And clear, to boot.  What we do is slip this code inside of a function passed to <span class="code">$(document).ready()</span>, which will be run when the, erm, document is, uh, ready.</p>
+
+
+Like this:
+<pre>
+$(document).ready(function {
+  $('.reset_invite_form').click(function() {
+    ... stuff ...
+  })
+})
+</pre>
+
+	<p>So on and so forth.  We attach Facebox to links the same way:</p>
+
+
+<pre>
+if ($.facebox)
+  $('a[rel*=facebox]').facebox()
+</pre>
+
+	<p>If the Facebox plugin is loaded, we find any links with a <span class="code">rel</span> of &#8220;facebox&#8221; and convert them from normal links into jsery&#8217;d Facebox links.  Easy as pie.</p>
+
+
+	<p>Which brings us, of course, to the segue.</p>
+
+
+	<h3>spamQuery()</h3>
+
+
+	<p>How are we using jQuery on FamSpam?  <a href="http://ennerchi.com/projects/jrails">jRails</a>?  Something custom?  By hand?!</p>
+
+
+	<p>Yeah, well, by hand.  We add all our behavior unobtrusively using the method detailed above.  As far as I know, there&#8217;s no javascript in our html.  If there is it&#8217;s on the run.  For its life.</p>
+
+
+	<p>If you want to peep around, the js is (predictably) right here: <a href="http://pastie.caboo.se/136116">http://famspam.com/javascripts/application.js</a>.</p>
+
+
+	<p>Something to note: as of writing (1.2.2), jQuery doesn&#8217;t play nicely with Rails&#8217; <span class="code">respond_to</span>.  But, hold the phone, it&#8217;s okay: a simple fix.  <a href="http://ozmm.org/posts/jquery_and_respond_to.html">Right here</a>:</p>
+
+
+<pre>
+jQuery.ajaxSetup({ 
+  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept",
+    "text/javascript")} 
+})  
+</pre>
+
+	<p>You&#8217;re now ready to rock.</p>
+
+
+	<p>Oh, one more thing before we move on: if you want some ajax-flavored will_paginate, check out <a href="http://ozmm.org/posts/ajax_will_paginate_jq_style.html">this short guide</a>.  It was mentioned in another post, and now it&#8217;s mentioned here.</p>
+
+
+	<h3>plugQuery()</h3>
+
+
+	<p>jQuery, you see, has a wonderfully simple plugin system.  We take full advantage of it by using a few choice plugins.  Here&#8217;s a taste to wet your pallet.</p>
+
+
+	<p>The most essential plugin is the <a href="http://www.malsup.com/jquery/form/">jQuery Form Plugin</a>.  With it, you can unobtrusively convert normal forms into ajax forms.  The (obvious) advantage of this is graceful degradation, which is very kind but also very courageous.</p>
+
+
+<pre>
+$('#new_person').ajaxForm(function() { alert('Atta boy!') })
+</pre>
+
+	<p>Seriously.  Simple.  And just so perfect for Rails&#8212;all the form&#8217;s attributes stay the same, including its <span class="code">action</span> and <span class="code">method</span>, just now it&#8217;s submitted through ajax.  <span class="code">respond_to</span> and jQuery are so in love it&#8217;s making me sick.</p>
+
+
+	<p>Another plugin we use is the <a href="http://tablesorter.com/docs/">Tablesorter</a>.  While we don&#8217;t have much tabular data on the promo or family sides of FamSpam, our admin interface is full of it.  Want to sort your families by number of members?  Conversations?  Photos?  It&#8217;s one line of code with this plugin.  Sure, we&#8217;ll have to do some more complicated server-side sorting as our database grows, but this does the trick so quick right now.</p>
+
+
+<pre>
+$('#sorted_table').tablesorter()
+</pre>
+
+	<p>See?</p>
+
+
+	<p>Another plugin we really love is the <a href="http://blue-anvil.com/archives/anti-aliased-rounded-corners-with-jquery">anti-aliased rounded corner plugin</a>.  Unfortunately this is not the most popular rounded corner plugin for jQuery, and that&#8217;s a shame.  A damn shame.  Because it&#8217;s definitely the best.  We use it on the home page and other places we thought could use some class.</p>
+
+
+	<p>As usual, it&#8217;s dead simple once installed:</p>
+
+
+<pre>
+$('.corner').corner()  
+</pre>
+
+	<p>You don&#8217;t have to be so generic with it, but we like to be.</p>
+
+
+	<p>Finally, the brand new <a href="http://plugins.jquery.com/project/jq-autocomplete">autocomplete plugin</a> by <a href="http://reinh.com/">ReinH</a> and <a href="http://yehudakatz.com/">wycats</a> is simple, small, and slick.  See a pattern here?  We&#8217;re using this on our admin site and couldn&#8217;t be happier.  It speaks <span class="caps">JSON</span>, baby.  Sign me up.</p>
+
+
+	<h3>thatsitQuery()</h3>
+
+
+	<p>Thanks for letting us stray for a moment from our normally dreary discourse.  Got any other cool jQuery tips or treats?  Leave &#8216;em in the comments.</p>
+
+
+	<p>Oh, a parting gift.  More code to chew on: <a href="http://pastie.caboo.se/136115">our tour.js</a>.  We use it to power the <a href="http://famspam.com/tour">FamSpam tour</a>.  Enjoy.</p>
+      </div>
+    </div>
+    <div align="center">
+      <img src="fin.jpg"/>
+    </div>
+    <div id="footer">
+      <div style="float:right;">
+      &copy; 2009 chris wanstrath
+      </div>
+      about ✦ archive ✦ github ✦ twitter
+    </div>
+  </body>
+</html>
