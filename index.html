@@ -15,6 +15,7 @@
         /* http://flickr.com/photos/cgstopgo/2199917653/ */
         background: url(defunkt.jpg) no-repeat;
         height: 1024px;
+        font-family: Lucida Grande;
       }
 
       ul {
@@ -28,9 +29,12 @@
         top: 130px;
       }
 
+      .at {
+        font-family: helvetica, arial;
+      }
+
       a {
         color: #bbb;
-        font-family: Lucida Grande;
         line-height: 18px;
       }
 
@@ -38,37 +42,22 @@
         font-family: Lucida Grande;      
       }
     </style>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(function() {
-        var limit = 10        // how many repos to list
-        var login = 'defunkt' // your username
-
-        $.getJSON('http://github.com/api/v1/json/' + login + '?callback=?', function(data) {
-          var repos = $.grep(data.user.repositories, function() {
-            return !this.fork
-          })
-
-          repos.sort(function(a, b) {
-            return b.watchers - a.watchers
-          })
-
-          $.each(repos.slice(0, limit), function() {
-            $('#repos').append('<li><a href="' + this.url + '">' + this.name + '</a></li>')
-          })
-        })        
-      })
-    </script>
   </head>
   <body>
     <a href="http://github.com/defunkt/defunkt.github.com"><img style="position:absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a>            
     <ul>
       <li><a href="http://twitter.com/defunkt">twitter.com/defunkt</a></li>
       <li><a href="http://github.com/defunkt">github.com/defunkt</a></li>
-      <li><a href="mailto:chris@ozmm.org">chris</a>@<a href="http://ozmm.org">ozmm.org</a></li>
+      <li><a href="mailto:chris@ozmm.org">chris</a><span class="at">@</span><a href="http://ozmm.org">ozmm.org</a></li>
     </ul>
     <ul id="repos">
-      <li><h3>repositories</h3></li>
+      <li><h3>projects</h3></li>
+      <li><a href="http://github.com">github</a></li>
+      <li><a href="http://hellorip.com">rip</a></li>
+      <li><a href="http://leafychat.com">leafy chat</a></li>
+      <li><a href="http://github.com/defunkt/lyndon">lyndon</a></li>
+      <li><a href="http://github.com/defunkt/fakefs">fakefs</a></li>
+      <li><a href="http://github.com/defunkt/textmate.el">textmate.el</a></li>
     </ul>
   </body>
 </html>
