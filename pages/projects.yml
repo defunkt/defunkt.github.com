@@ -44,7 +44,7 @@ projects:
   description: Yet another Emacs paste mode, this one for Gist.
 - name: ircamp
   url: http://github.com/defunkt/ircamp
-  description: Use Campfire from IRC 
+  description: Use Campfire from IRC
 - name: jasper
   url: http://github.com/defunkt/jasper
   description: Lispy JavaScript
