@@ -4,7 +4,13 @@
     <title> contact </title>
     <link href="reset.css" rel="stylesheet" type="text/css" />
     <link href="defunkt.css" rel="stylesheet" type="text/css" />
-    <style>.row { width: {{width}}px; }</style>
+    <style>
+      body { background-color: #FFFF00; }
+      .row > a:nth-child(6n+1):hover {
+        background-color: #00ffff;
+      }
+      .row { width: {{width}}px; }
+    </style>
   </head>
 
   <body>
@@ -14,7 +20,7 @@
       {{#contact}}
         <a href="{{url}}" class="block">
           <h2> {{name}} </h2>
-          <p> {{description}} </p>
+          <p> {{{description}}} </p>
         </a>
       {{/contact}}
     </div>
