@@ -26,5 +26,5 @@ end
 
 desc "Kick it!"
 task :kicker do
-  exec "kicker -e rake defunkt.css pages"
+  exec "kicker --no-growl -e rake defunkt.css pages"
 end
