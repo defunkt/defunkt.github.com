@@ -7,7 +7,7 @@ def build(page)
   yaml = YAML.load_file("pages/#{page}.yml")
   yaml["width"] = yaml[page.to_s].size * ((yaml['block-width'] || 260) + 32) + 4
   File.open("pages/#{page}.yml", "w") { |f| f.puts yaml.to_yaml + "---\n" }
-  system "cat pages/#{page}.yml pages/#{page}.mustache | mustache > #{page}.html"
+  system "cat pages/#{page}.{yml,mustache} | mustache > #{page}.html"
 end
 
 task :projects do
