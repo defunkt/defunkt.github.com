@@ -23,3 +23,8 @@ task :publish => :build do
   system "git commit -a -m publish"
   exec "git push origin master"
 end
+
+desc "Kick it!"
+task :kicker do
+  exec "kicker -e rake defunkt.css pages"
+end
