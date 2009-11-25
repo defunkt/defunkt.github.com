@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> talks </title>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="defunkt.css" rel="stylesheet" type="text/css" />
+    <style>
+      body { background-color: #FF00FF; }
+      .row > a:nth-child(6n+4):hover {
+        background-color: #00ffff;
+      }
+      .row { width: {{width}}px; }
+    </style>
+  </head>
+
+  <body>
+    <h1> talks, etc </h1>
+
+    <div class="row">
+      {{#talks}}
+        <a href="{{url}}" class="block">
+          <h2> {{name}} </h2>
+          <p> {{{description}}} </p>
+        </a>
+      {{/talks}}
+      <br style="clear:both;"/>
+    </div>
+
+    <div class="back">
+      <a href="/">
+      &#8617;
+      </a>
+    </div>
+  </body>
+</html>

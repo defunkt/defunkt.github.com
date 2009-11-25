@@ -1,0 +1,100 @@
+--- 
+talks: 
+- name: rubyconf 09
+  url: http://rubyconf.org/talks/42-rippin-off-python
+  description: rippin&#8217; off python
+- name: readwriteweb
+  url: http://www.readwriteweb.com/archives/google_go_open_source_language.php
+  description: interview-ish
+- name: djangocon 09
+  url: http://www.slideshare.net/err/the-realtime-web-and-other-buzzwords
+  description: the real-time web (and other buzzwords)
+- name: djangocon 09
+  url: http://www.slideshare.net/err/git-machine
+  description: "git: the lean, mean, distributed machine"
+- name: rails rumble 09
+  url: http://blog.railsrumble.com/2009/8/30/and-the-winner-is
+  description: "most complete award: hurl"
+- name: yui theatre
+  url: http://developer.yahoo.com/yui/theater/video.php?v=prestonwerner-github
+  description: "git: the lean, mean, distributed machine"
+- name: kings of code 09
+  url: http://www.kingsofcode.nl/pages/speakers#chriswanstrath
+  description: "git: the lean, mean, distributed machine"
+- name: oscon 09
+  url: http://en.oreilly.com/oscon2009/public/schedule/detail/8218
+  description: building a business on the cheap
+- name: infoq
+  url: http://www.infoq.com/news/2009/06/rip
+  description: rip interview
+- name: open source bridge 09
+  url: http://opensourcebridge.org/sessions/270
+  description: bootstrapping your open source business
+- name: django dash 09
+  url: http://djangodash.com/judging/results/
+  description: "2nd place: leafy chat"
+- name: railsconf 09
+  url: https://gist.github.com/0a2655aed6a26fa15a02
+  description: keynote
+- name: businessweek
+  url: http://images.businessweek.com/ss/09/04/0421_best_young_entrepreneurs/17.htm
+  description: best young entrepreneurs of 2009
+- name: meshu 09
+  url: http://www.meshu.ca/speakers-2009/#chris-wanstrath
+  description: building a business with open source
+- name: rubylearning
+  url: http://rubylearning.com/blog/2009/02/21/interview-chris-wanstrath-of-github/
+  description: interview
+- name: startup riot 09
+  url: http://gist.github.com/67060
+  description: keynote
+- name: crunchies 08
+  url: http://crunchies2008.techcrunch.com/2009/01/10/crunchies-2008-award-winners/
+  description: "best bootstrapped startup: github"
+- name: rails summit 08
+  url: http://gist.github.com/6443
+  description: keynote
+- name: ruby hoedown 08
+  url: http://gist.github.com/6443
+  description: keynote
+- name: railsconf 08
+  url: http://www.youtube.com/watch?v=-Reg0yhJw4s
+  description: interview
+- name: railsconf 08
+  url: http://en.oreilly.com/rails2008/public/schedule/detail/1779
+  description: creating successful side projects
+- name: railsconf 08
+  url: http://en.oreilly.com/rails2008/public/schedule/detail/1963
+  description: "the launch: dos and don&#8217;ts of real life deploys"
+- name: web 2.0 show
+  url: http://web20show.com/episodes/web20show-ep45-github
+  description: interview
+- name: akita on rails
+  url: http://www.akitaonrails.com/2008/4/21/chatting-with-chris-wanstrath-err-the-blog-github
+  description: interview
+- name: infoq
+  url: http://www.infoq.com/news/2008/03/github-git-repository-hosting
+  description: github interview-ish
+- name: goruco 08
+  url: http://goruco2008.confreaks.com/03_wanstrath.html
+  description: "forbidden fruit: a taste of ruby&#8217;s parse tree"
+- name: ruby on rails podcast
+  url: http://podcast.rubyonrails.org/programs/1/episodes/err-free
+  description: interview
+- name: lone star ruby conf 07
+  url: http://lonestarrubyconf.com/speakers/chris-wanstrath
+  description: "on your best behavior: bdd in ruby"
+- name: railsconf 07
+  url: http://www.slideshare.net/err/kickin-ass-with-cachefu
+  description: kickin&#8217; ass with cache_fu
+- name: svrc 07
+  url: http://www.slideshare.net/err/making-and-breaking-web-services-with-ruby
+  description: making and breaking web services with ruby
+- name: ruby on rails podcast
+  url: http://podcast.rubyonrails.org/programs/1/episodes/the_camping_episode
+  description: interview
+- name: sf ruby meetup
+  url: http://errtheblog.com/static/pdfs/memcached.pdf
+  description: memcaching rails
+width: 9348
+---

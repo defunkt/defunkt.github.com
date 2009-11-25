@@ -1,7 +1,7 @@
 task :default => :build
 
 desc "Build my site, dammit!"
-task :build => [ :projects, :contact ]
+task :build => [ :projects, :contact, :talks ]
 
 def build(page)
   yaml = YAML.load_file("pages/#{page}.yml")
@@ -12,6 +12,10 @@ end
 
 task :projects do
   build :projects
+end
+
+task :talks do
+  build :talks
 end
 
 task :contact do
