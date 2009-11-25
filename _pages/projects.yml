@@ -27,6 +27,9 @@ projects:
 - name: github-markup
   url: http://github.com/defunkt/github-markup
   description: The code we use to render README.your_favorite_markup
+- name: bacondrop
+  url: http://ozmm.org/posts/bacondrop.html
+  description: A simple app for uploading files to Baconfile.
 - name: fakefs
   url: http://github.com/defunkt/fakefs
   description: A fake filesystem. Use it in your tests.
@@ -45,5 +48,5 @@ projects:
 - name: jasper
   url: http://github.com/defunkt/jasper
   description: Lispy JavaScript
-width: 4384
+width: 4676
 ---
