@@ -42,5 +42,11 @@ projects:
 - name: gist.el
   url: http://github.com/defunkt/gist.el
   description: Yet another Emacs paste mode, this one for Gist.
-width: 4092
+- name: ircamp
+  url: http://github.com/defunkt/ircamp
+  description: IRC <-> Campfire Bridge
+- name: jasper
+  url: http://github.com/defunkt/jasper
+  description: Lispy JavaScript
+width: 4676
 ---
