@@ -68,3 +68,15 @@ p {
 .row > a:nth-child(6n+6):hover {
   background-color: #FF8000;
 }
+
+.back {
+  margin: 10px 0 0 10px;
+  display: block:
+  clear: both;
+}
+
+.back a {
+  font-size: 4em;
+  color: #000;
+  text-decoration: none;
+}
