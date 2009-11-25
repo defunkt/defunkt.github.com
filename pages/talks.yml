@@ -36,6 +36,9 @@ talks:
 - name: railsconf 09
   url: https://gist.github.com/0a2655aed6a26fa15a02
   description: keynote
+- name: railsconf 09
+  url: http://en.oreilly.com/rails2009/public/schedule/detail/7843
+  description: the github panel
 - name: businessweek
   url: http://images.businessweek.com/ss/09/04/0421_best_young_entrepreneurs/17.htm
   description: best young entrepreneurs of 2009
@@ -96,5 +99,5 @@ talks:
 - name: sf ruby meetup
   url: http://errtheblog.com/static/pdfs/memcached.pdf
   description: memcaching rails
-width: 9348
+width: 9640
 ---
