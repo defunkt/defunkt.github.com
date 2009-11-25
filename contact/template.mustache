@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> contact </title>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="defunkt.css" rel="stylesheet" type="text/css" />
+    <style>.row { width: {{width}}px; }</style>
+  </head>
+
+  <body>
+    <h1> contact </h1>
+
+    <div class="row">
+      {{#contact}}
+        <a href="{{url}}" class="block">
+          <h2> {{name}} </h2>
+          <p> {{description}} </p>
+        </a>
+      {{/contact}}
+    </div>
+  </body>
+</html>

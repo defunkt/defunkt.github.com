@@ -1,0 +1,25 @@
+--- 
+contact: 
+- name: email
+  url: mailto:http://github.com
+  description: chris@ozmm.org
+- name: github
+  url: http://github.com/defunkt
+  description: http://github.com/defunkt
+- name: twitter
+  url: http://twitter.com/defunkt
+  description: http://twitter.com/defunkt
+- name: defunktion junktion
+  url: http://defunktionjunktion.typepad.com/blog/
+  description: http://defunktionjunktion.typepad.com/blog/
+- name: flickr
+  url: http://flickr.com/photos/ozmm
+  description: http://flickr.com/photos/ozmm
+- name: blog
+  url: http://ozmm.org
+  description: http://ozmm.org
+- name: baconfile
+  url: http://baconfile.com/defunkt/
+  description: http://baconfile.com/defunkt/
+width: 2048
+---
