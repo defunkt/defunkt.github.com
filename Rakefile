@@ -17,3 +17,9 @@ end
 task :contact do
   build :contact
 end
+
+desc "Publish the site."
+task :publish => :build do
+  system "git commit -a -m publish"
+  exec "git push origin master"
+end
