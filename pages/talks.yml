@@ -1,5 +1,5 @@
---- 
-talks: 
+---
+talks:
 - name: rubyconf 09
   url: http://rubyconf.org/talks/42-rippin-off-python
   description: rippin&#8217; off python
@@ -59,6 +59,10 @@ talks:
   description: keynote
 - name: ruby hoedown 08
   url: http://gist.github.com/6443
+  description: keynote
+- name: erubycon 08
+  url: http://www.slideshare.net/err/git-machine
+  description: "git: the lean, mean, distributed machine"
   description: keynote
 - name: railsconf 08
   url: http://www.youtube.com/watch?v=-Reg0yhJw4s
