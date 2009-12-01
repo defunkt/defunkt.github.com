@@ -38,11 +38,11 @@ p {
   padding-left: 20px;
 }
 
-.row > a:nth-child(2n+1) {
+.row > a:nth-child(4n+1) {
   margin-top: 40px;
 }
 
-.row > a:nth-child(2n+3) {
+.row > a:nth-child(4n+3) {
   margin-top: 0;
 }
 
