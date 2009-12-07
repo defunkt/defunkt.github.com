@@ -1,7 +1,7 @@
----
-talks:
+--- 
+talks: 
 - name: gilt expert talk
-  url: http://giltexperttalk.eventbrite.com/ 
+  url: http://giltexperttalk.eventbrite.com/
   description: inside github
 - name: rubyconf 09
   url: http://rubyconf.org/talks/42-rippin-off-python
@@ -65,7 +65,6 @@ talks:
   description: keynote
 - name: erubycon 08
   url: http://www.slideshare.net/err/git-machine
-  description: "git: the lean, mean, distributed machine"
   description: keynote
 - name: railsconf 08
   url: http://www.youtube.com/watch?v=-Reg0yhJw4s
@@ -106,5 +105,5 @@ talks:
 - name: sf ruby meetup
   url: http://errtheblog.com/static/pdfs/memcached.pdf
   description: memcaching rails
-width: 9640
+width: 10224
 ---
