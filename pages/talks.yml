@@ -1,5 +1,8 @@
 ---
 talks:
+- name: gilt expert talk
+  url: http://giltexperttalk.eventbrite.com/ 
+  description: inside github
 - name: rubyconf 09
   url: http://rubyconf.org/talks/42-rippin-off-python
   description: rippin&#8217; off python
