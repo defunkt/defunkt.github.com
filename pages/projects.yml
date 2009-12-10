@@ -3,6 +3,9 @@ projects:
 - name: github
   url: http://github.com
   description: Social coding.
+- name: hub
+  url: http://github.com/defunkt/hub
+  description: hub introduces git to GitHub
 - name: resque
   url: http://github.com/defunkt/resque
   description: A simple Redis-based queue.
@@ -48,5 +51,5 @@ projects:
 - name: jasper
   url: http://github.com/defunkt/jasper
   description: Lispy JavaScript
-width: 4676
+width: 4968
 ---
