@@ -1,8 +1,11 @@
---- 
-projects: 
+---
+projects:
 - name: github
   url: http://github.com
   description: Social coding.
+- name: repl
+  url: http://github.com/defunkt/repl
+  description: sometimes you need a repl
 - name: hub
   url: http://github.com/defunkt/hub
   description: hub introduces git to GitHub
@@ -15,6 +18,9 @@ projects:
 - name: pystache
   url: http://github.com/defunkt/pystache
   description: Mustache in Python
+- name: gist
+  url: http://github.com/defunkt/gist
+  description: Absolutely the best command line gister.
 - name: rip
   url: http://hellorip.com
   description: A next generation packaging system for Ruby.
@@ -27,6 +33,9 @@ projects:
 - name: textmate.el
   url: http://github.com/defunkt/textmate.el
   description: Basic emulation of awesome TextMate features for Emacs.
+- name: gist.el
+  url: http://github.com/defunkt/gist.el
+  description: Yet another Emacs paste mode, this one for Gist.
 - name: github-markup
   url: http://github.com/defunkt/github-markup
   description: The code we use to render README.your_favorite_markup
@@ -42,9 +51,6 @@ projects:
 - name: facebox
   url: http://github.com/defunkt/facebox
   description: Facebook-style lightbox, built in jQuery
-- name: gist.el
-  url: http://github.com/defunkt/gist.el
-  description: Yet another Emacs paste mode, this one for Gist.
 - name: ircamp
   url: http://github.com/defunkt/ircamp
   description: IRC <-> Campfire Bridge
