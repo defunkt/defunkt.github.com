@@ -1,5 +1,5 @@
----
-projects:
+--- 
+projects: 
 - name: github
   url: http://github.com
   description: Social coding.
@@ -57,5 +57,5 @@ projects:
 - name: jasper
   url: http://github.com/defunkt/jasper
   description: Lispy JavaScript
-width: 4968
+width: 5552
 ---
