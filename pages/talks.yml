@@ -1,5 +1,8 @@
---- 
-talks: 
+---
+talks:
+- name: the changelog
+  url: http://thechangelog.com/post/352878673/episode-0-1-0-chris-wanstrath-from-github
+  description: github interview
 - name: gilt expert talk
   url: http://www.slideshare.net/err/inside-github
   description: inside github
