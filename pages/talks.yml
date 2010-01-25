@@ -1,5 +1,5 @@
----
-talks:
+--- 
+talks: 
 - name: the changelog
   url: http://thechangelog.com/post/352878673/episode-0-1-0-chris-wanstrath-from-github
   description: github interview
@@ -108,5 +108,5 @@ talks:
 - name: sf ruby meetup
   url: http://errtheblog.com/static/pdfs/memcached.pdf
   description: memcaching rails
-width: 10224
+width: 10516
 ---
