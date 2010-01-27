@@ -1,13 +1,17 @@
 task :default => :build
 
 desc "Build my site, dammit!"
-task :build => [ :projects, :contact, :talks ]
+task :build => [ :projects, :contact, :talks, :about ]
 
 def build(page)
   yaml = YAML.load_file("pages/#{page}.yml")
   yaml["width"] = yaml[page.to_s].size * ((yaml['block-width'] || 260) + 32) + 4
   File.open("pages/#{page}.yml", "w") { |f| f.puts yaml.to_yaml + "---\n" }
   system "cat pages/#{page}.{yml,mustache} | mustache > #{page}.html"
+end
+
+task :about do
+  build :about
 end
 
 task :projects do
@@ -30,5 +34,5 @@ end
 
 desc "Kick it!"
 task :kicker do
-  exec "kicker --no-growl -e rake defunkt.css pages"
+  exec "kicker --no-growl -e rake css/defunkt.css pages"
 end
