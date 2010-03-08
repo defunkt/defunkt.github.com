@@ -12,12 +12,12 @@ contact:
 - name: blog
   url: http://ozmm.org
   description: ones zeros majors and minors
-- name: flickr
-  url: http://flickr.com/photos/ozmm
-  description: iphone photos
 - name: defunktion junktion
   url: http://defunktionjunktion.typepad.com/blog/
   description: tumblin&#8217;
+- name: flickr
+  url: http://flickr.com/photos/ozmm
+  description: iphone photos
 - name: baconfile
   url: http://baconfile.com/defunkt/
   description: tasty files
