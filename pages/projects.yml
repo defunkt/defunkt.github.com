@@ -3,12 +3,9 @@ projects:
 - name: github
   url: http://github.com
   description: Social coding.
-- name: hurl
-  url: http://hurl.it/
-  description: Hurl makes HTTP requests
 - name: resque
   url: http://github.com/defunkt/resque
-  description: A simple Redis-based queue.
+  description: A Redis-backed Ruby library for queueing and working.
 - name: mustache
   url: http://defunkt.github.com/mustache
   description: Logic-less templates.
@@ -27,6 +24,9 @@ projects:
 - name: gem-man
   url: http://defunkt.github.com/gem-man/
   description: View a RubyGem's man page
+- name: hurl
+  url: http://hurl.it/
+  description: Hurl makes HTTP requests
 - name: coffee-mode
   url: http://github.com/defunkt/coffee-mode
   description: CoffeeScript major mode for Emacs.
