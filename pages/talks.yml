@@ -1,5 +1,14 @@
 --- 
 talks: 
+- name: yhp
+  url: http://yourhiddenpotential.co.uk/2010/05/04/github%E2%80%99s-co-founder-chris-wanstrath/
+  description: interview
+- name: posscon 10
+  url: http://www.flickr.com/photos/49742412@N06/4562714517/sizes/l/
+  description: open source sucks
+- name: the geek talk
+  url: http://thegeektalk.com/interviews/chris-wanstrath/
+  description: interview
 - name: the changelog
   url: http://thechangelog.com/post/352878673/episode-0-1-0-chris-wanstrath-from-github
   description: github interview
@@ -111,5 +120,5 @@ talks:
 - name: sf ruby meetup
   url: http://errtheblog.com/static/pdfs/memcached.pdf
   description: memcaching rails
-width: 10808
+width: 11684
 ---
