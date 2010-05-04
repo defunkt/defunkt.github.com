@@ -1,8 +1,8 @@
---- 
-contact: 
+---
+contact:
 - name: email
-  url: mailto:chris@ozmm.org
-  description: chris@ozmm.org
+  url: mailto:chris@wanstrath.com
+  description: chris@wanstrath.com
 - name: github
   url: http://github.com/defunkt
   description: social coding
