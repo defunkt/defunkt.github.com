@@ -1,7 +1,7 @@
 task :default => :build
 
 desc "Build my site, dammit!"
-task :build => [ :index, :projects, :contact, :talks, :about ]
+task :build => [ :index, :contact, :talks, :about ]
 
 def build(page)
   require 'yaml'
@@ -26,10 +26,6 @@ end
 
 task :about do
   build :about
-end
-
-task :projects do
-  build :projects
 end
 
 task :talks do
